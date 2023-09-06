@@ -1,0 +1,28 @@
+{{- if .Site.IsServer -}} {{ "<!-- page: thank-you.html -->" | safeHTML }} {{- end -}}
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+  <body class="extra-page">
+    <div class="main-body">
+      <div class="header">
+        <a href="{{ .Site.BaseURL }}" class="logo">
+          <img src="{{ .Site.Params.logo }}" alt="logo">
+        </a>
+        <div class="divider"></div>
+        <a href="{{ .Site.BaseURL }}"><i class="fas fa-arrow-left"></i></a>
+      </div>
+      <div class="thankyou ghost"> <span class="text">Thank You</span>
+        <div class="eye"></div>
+        <div class="eye two"></div>
+        <div class="mouth"></div>
+        <div class="shadow"></div>
+      </div>
+      <div class="main">
+        <div class="error thankyou">{{ .Params.header_title | safeHTML }}</div>
+        <h2 class="text-custom-white">{{ .Params.thank_you_text }}</h2>
+      </div>
+    </div>
+    {{ partial "script.html" . }}
+  </body>
+</html>
+{{- if .Site.IsServer -}} {{ "<!-- page: thank-you.html -->" | safeHTML }} {{- end -}}

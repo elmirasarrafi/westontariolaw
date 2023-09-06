@@ -1,0 +1,110 @@
+{{ define "main" }}
+  {{- if .Site.IsServer -}} {{ "<!-- _default: single.html -->" | safeHTML }} {{- end -}}
+  {{ partial "page-header.html" . }}
+  <section class="section-padding bg-gray">
+    <div class="container">
+      <div class="row">
+        <aside class="col-lg-4">
+          <div class="sidebar_wrap mb-md-80">
+            <div class="sidebar">
+              
+              <div class="sidebar_widgets mb-xl-30">
+                <div class="widget_title bg-light-blue">
+                  <h5 class="no-margin text-custom-white fw-600">Popular Tags</h5>
+                </div>
+                <ul class="custom tags sidebar-services">
+                  {{ range where .Site.RegularPages.ByDate "Type" "blog" }}
+                    {{ range .Params.tags }}
+                      <li class=""> <a href="/tags/{{ . | urlize }}" class="text-custom-black fs-14">{{ . }}
+                        <span><i class="fas fa-chevron-right"></i></span></a>
+                      </li>
+                    {{ end }}
+                  {{ end }}
+                 
+                </ul>
+              </div>
+              <div class="sidebar_widgets">
+                <div class="widget_title bg-light-blue">
+                  <h5 class="no-margin text-custom-white fw-600">Recent Blog</h5>
+                </div>
+                <ul class="custom popular_post">
+                  {{range first 3 (where .Site.RegularPages.ByDate "Type" "blog").Reverse }}
+                  <li>
+                    <div class="post">
+                      <div class="post-wrapper">
+                        <div class="popular_post_img animate-img">
+                          <a href="{{ .RelPermalink }}">
+                            <img src="{{ .Params.blog_image }}" class="img-fluid image-fit" alt="#">
+                          </a>
+                        </div>
+                        <div class="popular_post_title">
+                          <div class="post-date">
+                            <p class="no-margin">{{ dateFormat "Jan 02, 2006" .Params.blog_date }}</p>
+                          </div>
+                          <h6><a href="{{ .RelPermalink }}" class="text-custom-black fs-16 fw-600">{{ .Title }}</a></h6>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  {{ end }}
+                 
+                </ul>
+              </div>
+             
+             
+            </div>
+          </div>
+        </aside>
+        <div class="col-8">
+          <div class="blog-detail padding-20">
+            <article class="post">
+                <div class="blog-meta">
+                  <h1>{{ .Title }}</h1>
+                  <div class="post-meta-box">
+                    <div class="post-meta mb-xl-20">
+                     
+                      <div class="author-meta">
+                       
+                        <p class="no-margin text-light-grey"><strong>Date: {{ dateFormat "Jan 02, 2006" .Params.blog_date }}</strong></p>
+                      </div>
+                    </div>
+                    
+                  <div class="text-light-white">
+                    {{ .Content }}
+                  </div>
+                </div>
+              </div>
+            </article>
+            <hr>
+            <div class="post-details-tags-social">
+              <div class="row">
+                <div class="col-lg-8 col-md-8">
+                  <div class="tags-box mb-xl-20"> <span class="fs-18 text-dark-white"><i
+                        class="fas fa-tags"></i></span>
+                    <div class="tags"> 
+                    {{ range .Params.tags }}
+                      <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+                    {{ end }}
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <hr class="mt-0">
+            <div class="comment-box section-padding-top p-relative">
+              <div id="comment-box">
+                <div class="comment-respond" id="respond">
+                  <h4 class="text-custom-black fw-600">Leave Comment</h4>
+                  {{ template "_internal/disqus.html" . }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  {{- if .Site.IsServer -}} {{ "<!-- END _default: single.html -->" | safeHTML }} {{- end -}}
+{{ end }}

@@ -1,0 +1,69 @@
+{{- if .Site.IsServer -}} {{ "<!-- partials: navigation.html -->" | safeHTML }} {{- end -}}
+<header class="header-style-1">
+  <!-- Start Topbar -->
+  {{ partial "top-bar.html" . }}
+  <!-- End Topbar -->
+  <!-- Start Navigation -->
+  <div class="main-navigation-style-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="navigation">
+            <div class="logo">
+              <a href="{{ .Site.BaseURL }}">
+                <img src="{{ .Site.Params.logo }}" class="img-fluid image-fit" alt="Logo">
+              </a>
+            </div>
+            <div class="logo-sticky">
+              <a href="{{ .Site.BaseURL }}">
+                <img src="{{ .Site.Params.sticky_logo }}" class="img-fluid image-fit" alt="Logo">
+              </a>
+            </div>
+            <div class="main-menu">
+              <div class="mobile-logo">
+                <a href="{{ .Site.BaseURL }}">
+                  <img src="{{ .Site.Params.logo }}" class="img-fluid image-fit" alt="Logo">
+                </a>
+              </div>
+              <nav>
+                <ul class="custom">
+                  {{ $currentPage := . }}
+                  {{ range .Site.Menus.main }}
+                    {{ if .HasChildren }}
+                      <li class='menu-item menu-item-has-children {{ if $currentPage.IsMenuCurrent "main" . }}open{{ end }}'>
+                        <a href="{{ .URL }}" class='text-custom-white {{ if or ( $currentPage.HasMenuCurrent "main" . ) ( $currentPage.IsMenuCurrent "main" . ) }}active{{ end }}'>{{ .Name }}</a>
+                        <ul class="custom sub-menu">
+                          {{ range .Children }} 
+                            <li class='menu-item'> <a href="{{ .URL }}" class='text-light-grey {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>{{ .Name }}</a>
+                            </li>
+                          {{ end }}       
+                        </ul>
+                      </li>
+                    {{ else }}
+                      <li class="menu-item "> <a href="{{ .URL }}" class='text-custom-white {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>{{ .Name }}</a>
+                      </li>
+                    {{ end }}
+                  {{ end }}
+                </ul>
+              </nav>
+              <!-- <div class="right-side">
+                <div class="cta-btn"> <a href="#" class="btn-first btn-submit">
+                    Apply Today
+                  </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="hamburger-menu">
+              <div class="menu-btn"> <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Navigation -->
+</header>
+{{- if .Site.IsServer -}} {{ "<!-- END partials: navigation.html -->" | safeHTML }} {{- end -}}

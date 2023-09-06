@@ -1,0 +1,66 @@
+{{ define "main" }}
+{{- if .Site.IsServer -}} {{ "<!-- page: about.html -->" | safeHTML }} {{- end -}}
+{{ partial "page-header.html" . }}
+<section class="section-padding about-us-sec p-relative">
+  <div class="side-lines"> <span class="box"></span>
+    <span class="text">{{ .Site.Params.siderbar_title }}</span>
+    <span class="line"></span>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="about-left-side mb-md-40 ">
+          <h2 class="text-custom-black fw-700">{{ .Params.about_title }}</h2>
+          <div class="text-light-white fs-14 mb-xl-20">{{ .Params.about_text | markdownify }}</div>
+          <div class="about-list">
+            <ul>
+              {{ range .Params.about_list }}
+              <li class="text-light-white fs-14"><i class="fas fa-check"></i>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="about-right-side-img p-relative">
+          <div class="first-img p-relative">
+            <img src="{{ .Params.about_image }}" class="img-fluid full-width" alt="about us">
+            <div class="transform-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-light-white-skew-2 bg-custom-black"></div>
+</section>
+<section class="section-padding about-us-sec p-relative">
+  <div class="side-lines right-side"> 
+    <span class="box"></span>
+    <span class="text">{{ .Site.Params.siderbar_title }}</span>
+    <span class="line"></span>
+  </div>
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-xl-6 col-lg-6 col-md-6 about-sec-bg-1">
+        <div class="about-left-side-1">
+          <div class="section-header">
+            <div class="section-heading">
+              <h3 class=" fw-700 text-dark">{{ .Params.our_vision_title }}</h3>
+            </div>
+          </div>
+          <p class="text-light-white fs-14 mb-xl-20">{{ .Params.our_vision_text | markdownify }}</p>
+        
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6">
+        <div class="full-height">
+          <img src="{{ .Params.our_vision_image }}" class="img-fluid image-fit" alt="about us">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+{{- if .Site.IsServer -}} {{ "<!-- END  page: about.html -->" | safeHTML }} {{- end -}}
+{{ end }}

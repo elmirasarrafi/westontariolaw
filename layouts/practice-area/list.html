@@ -1,0 +1,95 @@
+{{ define "main" }}
+  {{- if .Site.IsServer -}} {{ "<!-- practicce-area: list.html -->" | safeHTML }} {{- end -}}
+  {{ partial "page-header.html" . }}     
+  <section class="section-padding bg-gray service-page">
+    <div class="container">
+      <div class="row j-center">
+        {{ range where .Site.RegularPages.ByWeight "Type" "practice-area" }}
+          <div class="col-lg-6 d-grid">
+            <div class="service-detail-sec bg-custom-white bx-wrapper">
+              <div class="service-image mb-xl-30">
+                <a href="{{ .RelPermalink }}"><img src="{{ .Params.practice_area_image }}" class="image-fit" alt="{{ .Title }}"></a>
+              </div>
+              <div class="service-meta list-content mb-xl-40">
+                <h2 class="text-custom-black fw-600"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <p class="text-light-white no-margin">{{ .Params.about }}</p>
+                <a href="{{ .RelPermalink }}" class="btn-first btn-submit text-custom-black">Read More</a>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <!-- <section class="book-appointment parallax section-padding" id="book-appointment">
+    <div class="overlay overlay-bg-black"></div>
+    <div class="pattern"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="appointment-sec">
+            <div class="row no-gutters">
+              <div class="col-lg-6 ">
+                <div class="padding-40 full-height bg-white">
+                  <div class="align-self-center">
+                    <div class="section-heading">
+                      <h3 class="text-custom-blue fw-600 ">{{ .Params.form_left_title }}</h3>
+                    </div>
+                    <p class="text-dark">{{ .Params.form_left_text }}</p>
+                
+                    <div class="LOANLY-address">
+                      <p class="text-dark "><span class="fw-600">Address</span> :<br> {{ .Site.Params.address | safeHTML }}</p>
+                      <p class="text-dark "><span class="fw-600">Email</span> : {{ .Site.Params.email }}</p>
+                    </div>
+                    <a href="tel:{{ .Site.Params.phone_no_url }}" class="btn-first btn-submit-fill"><i
+                        class="fas fa-phone mr-2 fs-16"></i><span class="fs-16">{{ .Site.Params.phone_no }}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 align-self-center">
+                <div class="right-side full-height bg-border">
+                  <div class="section-heading text-center">
+                    <h3 class="text-white fw-600">{{ .Params.form_title }}</h3>
+                  </div>
+                  <form class="form-style-2 form-style-3" name="practice-area" method="POST" action="/thank-you/">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="input-group"> <span class="input-group-preappend"><i
+                                class="fas fa-user"></i></span>
+                            <input type="text" name="fullname" class="form-control" placeholder="Full Name">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="input-group"> <span class="input-group-preappend"><i
+                                class="fas fa-envelope"></i></span>
+                            <input type="email" name="email" class="form-control" placeholder="Email Address">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="input-group"> <span class="input-group-preappend"><i
+                                class="fas fa-phone-alt"></i></span>
+                            <input type="text" name="pno" class="form-control" placeholder="Phone Number">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <button type="submit" class="btn-first btn-submit full-width">Book Apply Today</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>    -->
+  {{- if .Site.IsServer -}} {{ "<!-- END  practicce-: list.html -->" | safeHTML }} {{- end -}}
+{{ end }}

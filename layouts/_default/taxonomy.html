@@ -1,0 +1,74 @@
+{{ define "main" }}
+  {{- if .Site.IsServer -}} {{ "<!-- _default: taxonomy.html -->" | safeHTML }} {{- end -}}
+    {{ partial "page-header.html" . }}
+    <section class="section-padding bg-gray our-articles">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 no-padding">
+            <div class="blog-slider">
+              <div class="row j-center">
+                {{ $paginator := .Paginate (where .Pages.ByDate "Type" "blog").Reverse }}
+                {{ range .Paginator.Pages }}
+                  <div class="col-lg-4 d-grid">
+                    <article class="post col-12 d-grid">
+                      <div class="single-blog">
+                        <div class="post-meta">
+                          <div class="post-date"><a href="{{ .RelPermalink }}" class="text-custom-white"> {{ dateFormat "Jan 02, 2006" .Params.blog_date }}</a>
+                          </div>
+                        </div>
+                        <div class="blog-photo">
+                          <img src="{{ .Params.blog_image }}" class="full-width" alt="#">
+                        </div>
+                        <div class="post-contnet">
+                          <h2 class="post-title text-custom-black">{{ .Title }}</h2>
+                          <p class="text-light-white">{{ .Params.about_blog }}</p>
+                         
+                        </div>
+                        <div class="blog-overlay">
+                          <div class="right-text-effect post-content">
+                            <h2 class="post-title"><a href="{{ .RelPermalink }}" class="text-white">{{ .Title }}</a></h2>
+                          </div>
+                          <div class="blog-read-more-icon">
+                            <a href="{{ .RelPermalink }}" class="fw-500 fs-14">Read More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                {{ end }}
+              </div>
+              
+            </div>
+          </div>
+        </div>
+       
+        <!-- <div class="row">
+          <div class="col-12">
+            <nav class="section-padding-top">
+              <ul class="pagination justify-content-center">
+                {{ $paginator := .Paginate .Pages }}
+                  {{ if .Paginator.HasPrev }}
+                    <li class="page-item"><a class="page-link" href="{{ .Paginator.Prev.URL }}">Previous</a>
+                    </li>
+                  {{ end }}
+                  {{ range .Paginator.Pagers }}
+                    {{ if eq .PageNumber $paginator.PageNumber }} 
+                      <li class="page-item active"><a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+                      </li>
+                    {{ else }}
+                      <li class="page-item"><a class="page-link" href="{{ .URL }}">{ .PageNumber }}</a>
+                      </li>
+                    {{ end }}
+                  {{ end }}
+                  {{ if .Paginator.HasNext }}
+                    <li class="page-item"><a class="page-link" href="{{ .Paginator.Next.URL }}">Next</a>
+                    </li>
+                  {{ end }}
+              </ul>
+            </nav>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  {{- if .Site.IsServer -}} {{ "<!-- END _default: taxonomy.html -->" | safeHTML }} {{- end -}}
+{{ end }}

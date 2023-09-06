@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{{- if .Site.IsServer -}} {{ "<!--  _default: baseof.html -->" | safeHTML }} {{- end -}}
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7VSQQW"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    <div class="main-body">
+      {{ partial "navigation.html" . }}
+      {{ block "main" . }}
+        {{ .Content | safeHTML }}
+      {{ end }}
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "script.html" . }}
+  </body>
+</html>
+
+{{- if .Site.IsServer -}} {{ "<!-- END _default: baseof.html -->" | safeHTML }} {{- end -}}

@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{- if .Site.IsServer -}} {{ "<!-- page: terms-and-condition.html -->" | safeHTML }} {{- end -}}
+  {{ partial "page-header.html" . }}
+  <div class="condition-section">
+    <div class="container">
+      <div class="row j-center">
+        <div class="col-lg-10">
+          <div class="content-wrapper">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{- if .Site.IsServer -}} {{ "<!-- END page: terms-and-condition.html -->" | safeHTML }} {{- end -}}
+{{ end }}

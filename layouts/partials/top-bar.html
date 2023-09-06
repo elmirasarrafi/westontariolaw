@@ -1,0 +1,29 @@
+{{- if .Site.IsServer -}} {{ "<!-- partials: top-bar.html -->" | safeHTML }} {{- end -}}
+  <div class="topbar-style-1">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="left-side">
+          
+            <i class="fas fa-map-marker-alt text-custom-white fs-14 m-res"></i><p class="text-custom-white no-margin">{{ .Site.Params.address_topbar | safeHTML }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="right-side">
+            <ul class="custom">
+          
+              <li class="text-custom-white fs-16 language" id="google_translate_element"></li>
+              <!-- <li><a href="{{ .Site.Params.facebook_url }}" class="text-custom-white fs-14"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li><a href="{{ .Site.Params.twitter_url }}" class="text-custom-white fs-14"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li><a href="{{ .Site.Params.linkedin_url }}" class="text-custom-white fs-14"><i class="fab fa-linkedin"></i></a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+{{- if .Site.IsServer -}} {{ "<!-- END partials: top-bar.html -->" | safeHTML }} {{- end -}}

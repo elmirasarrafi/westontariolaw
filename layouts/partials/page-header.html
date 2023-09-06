@@ -1,0 +1,34 @@
+{{- if .Site.IsServer -}} {{ "<!-- partial: page-header.html -->" | safeHTML }} {{- end -}}
+  <div class="sub-header p-relative" style='background-image: url("{{ if .Params.page_header  }}{{ .Params.page_header }}{{ else }}{{ .Site.Params.page_header }}{{ end }}");'>
+    <div class="overlay overlay-bg-black"></div>
+    <div class="pattern"></div>
+    <div class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sub-header-content p-relative">
+              {{ $type := .Type  }}
+              {{ if eq $type "practice-area" }}
+              <h2 class="text-custom-white lh-default fw-600">{{ .Title }}</h2>
+              {{ else if eq $type "blog" }}
+                <h2 class="text-custom-white lh-default fw-600"></h2>
+              {{ else }}
+              <h1 class="text-custom-white lh-default fw-600">{{ .Title }}</h1>
+              {{ end }}
+              <ul class="custom">
+                <li> <a href="{{ .Site.BaseURL }}" class="text-custom-white">Home</a>
+                </li>
+                {{ range (split .RelPermalink "/") }}
+                  {{ if gt (len . ) 0 }}
+                    <li ><a href="/{{ . }}" class="text-custom-white">{{ humanize (replace . "posts" "blog") }}</a></li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                 
+{{- if .Site.IsServer -}} {{ "<!-- END  partial: page-headere.html -->" | safeHTML }} {{- end -}}

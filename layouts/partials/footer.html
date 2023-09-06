@@ -1,0 +1,122 @@
+{{- if .Site.IsServer -}} {{ "<!-- partials: footer.html -->" | safeHTML }} {{- end -}}
+  <footer class="bg-black section-padding footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-box mb-md-80">
+            <div class="footer-heading">
+              <a href="{{ .Site.BaseURL }}">
+                <img src="{{ .Site.Params.logo }}" class="img-fluid image-fit" alt="Logo">
+              </a>
+            </div>
+            <p class="text-custom-white">{{ .Site.Params.about_footer  }}</p>
+            <!-- <div class="social-media">
+              <ul class="custom social-media">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li><a href="#"><i class="fab fa-google-plus"></i></a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-3 offset-lg-2 col-sm-6">
+          <div class="footer-box mb-md-80">
+            <div class="footer-heading">
+              <h4 class="text-custom-white no-margin">Useful Links</h4>
+            </div>
+            <ul class="custom links">
+              {{ range .Site.Menus.footer }}
+                <li> <a href="{{ .URL }}" class="text-custom-white">{{ .Name }}</a></li>
+              {{ end }}
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="footer-box">
+            <div class="footer-heading">
+              <h4 class="text-custom-white no-margin">Support</h4>
+            </div>
+            <div class="support-area-wrapper">
+              <ul class="custom">
+                <li class="support-link address">
+                  <i class="fas fa-map-marker-alt"></i>{{ .Site.Params.address | safeHTML }}
+                </li>
+                <li class="support-link">
+                  <i class="fas fa-envelope-open-text"></i><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+                </li>
+                <li class="support-link">
+                  <i class="fas fa-phone-alt"></i><a href="tel:{{ .Site.Params.phone_no_url }}">{{ .Site.Params.phone_no }}</a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="newsletter">
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-custom" placeholder="Email Id">
+                </div>
+                <button class="btn-first btn-submit-fill btn-height full-width" type="submit">Subscribe</button>
+              </form>
+            </div> -->
+            
+          </div>
+        </div>
+        <!-- <div class="col-lg-4 offset-lg-1 col-sm-6">
+          <div class="footer-box">
+            <div class="footer-heading">
+              <h4 class="text-custom-white no-margin">Social</h4>
+            </div>
+          
+            <div class="social-media">
+              <ul class="custom social-media">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li><a href="#"><i class="fab fa-google-plus"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8"> 
+          <p class="text-custom-white no-margin">Copyright © <span id="year"></span> {{ .Site.Params.copyright }}
+        </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="payment-logo mb-md-20">
+            <ul class="custom links copyright-section-link">
+              {{ range .Site.Menus.footer1 }}
+                <li> <a href="{{ .URL }}" class="text-custom-white">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+  <div id="back-top" class="back-top"> <a href="#top"><i class="flaticon-up-arrow"></i></a>
+  </div> <script>
+    document.querySelector("#year").innerHTML = (new Date()).getFullYear();
+  </script>
+{{- if .Site.IsServer -}} {{ "<!-- END partials: footer.html -->" | safeHTML }} {{- end -}}
+
+

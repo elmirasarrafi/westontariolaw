@@ -1,0 +1,325 @@
+{{ define "main" }}
+  {{- if .Site.IsServer -}} {{ "<!--  _default: home.html -->" | safeHTML }} {{- end -}}
+  <div class="slider video-banner">
+    <div class="side-lines"> <span class="box"></span>
+      <span class="text">{{ .Site.Params.siderbar_title }}</span>
+      <span class="line"></span>
+    </div>
+    <video playsinline="playsinline" class="jarallax" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="{{ .Params.header_bg_video }}" type="video/mp4">
+    </video>
+    <div class="transform-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="banner-slider">
+                <div class="slide-item">
+                  <div class="banner-text">
+                    <h1 class="text-custom-white fw-700">{{ .Params.header_title }}</h1>
+                    <p class="text-custom-white">{{ .Params.header_text }}</p> 
+                    <a href="{{ .Params.header_btn_url }}" class="btn-first btn-submit-fill">{{ .Params.header_btn }}</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="genmed-intro">
+    <div class="container">
+      <div class="row justify-content-center">
+        {{ range where .Site.RegularPages.ByWeight "Type" "practice-area" }}
+          <div class="col-lg-4  col-sm-6 d-grid">
+            <div class="intro-box bg-dark-brown mb-md-20">
+              <div class="intro-wrapper text-center"> <i class="flaticon-flag"></i>
+                <h3 class="text-custom-white fw-700">{{ .Title }}</h3>
+                <p class="text-custom-white">{{ .Params.about }}</p> 
+                <a href="{{ .RelPermalink }}" class="btn-first btn-submit fw-600">Read more</a>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <section class="main-services section-padding p-relative">
+    <div class="side-lines"> <span class="box"></span>
+      <span class="text">{{ .Site.Params.siderbar_title }}</span>
+      <span class="line"></span>
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-heading">
+          <h3 class="text-custom-black fw-700">{{ .Params.expertise_title }}</h3>
+          <div class="section-description">
+            <p class="text-light-white">{{ .Params.expertise_text }}</p>
+          </div>
+        </div>
+        <!-- <div class="section-btn"> <a href="/expertise/" class="btn-first btn-submit text-light-blue">View More</a>
+        </div> -->
+      </div>
+      <div class="expertise lw-tab-section p-relative">
+        <div class="container">
+          <div class="row justify-content-center">
+            {{ range .Params.expertise_list }}
+              <div class="col-lg-2 col-6 d-grid"> 
+                <div class="main-services-box p-relative mb-xl-30 d-grid">
+                  <div class="main-service-wrapper padding-20">
+                    <div class="icon-box"> <img src="{{ .image }}" alt=""></div>
+                    <h5 class="fw-700"><a class="text-custom-black"></a>{{ .title }}</a></h5>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="section-padding lw-about-section p-relative">
+    <div class="side-lines right-side"> <span class="box"></span>
+      <span class="text">{{ .Site.Params.siderbar_title }}</span>
+      <span class="line"></span>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="ln-about-left-side p-relative full-height">
+            <div class="first-img full-height">
+              <img src="{{ .Params.about_image1 }}" class="image-fit" alt="img">
+            </div>
+            <div class="second-img">
+              <img src="{{ .Params.about_image2 }}" class="image-fit" alt="img">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="lw-about-section-right">
+            <h2 class="p-relative lw-about-right-heading">{{ .Params.about_title }}</h2>
+            <div class="lw-about-right-content">
+              <p>{{ .Params.about_text | markdownify }}</p>
+              <div class="lw-about-right-list">
+                <ul>
+                  {{ range .Params.about_list }}
+                    <li> 
+                      <i class="fas fa-check"></i>{{ . }}
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="download-app parallax">
+    <div class="side-lines right-side style-2"> <span class="box"></span>
+      <span class="text">{{ .Site.Params.siderbar_title }}</span>
+      <span class="line"></span>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-6">
+          <div class="app-img-side">
+            <div class="section-header section-padding-top">
+              <div class="section-heading">
+                <h2 class="text-custom-white fw-700">{{ .Params.feature_title }}</h2>
+                <div class="section-description">
+                  <p class="text-custom-white">{{ .Params.feature_text }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="app-features section-padding-bottom">
+              <ul class="custom">
+                {{ range .Params.feature_list }}
+                  <li> 
+                    <!-- <i class="flaticon-live-show"></i> -->
+                    <img src="{{ .feature_image }}" alt="">                    
+                    <h4 class="text-light-blue">{{ .title }}</h4>
+                    <p class="text-custom-white">{{ .text }}</p>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="section-padding doctors-team-style-2 bg-gray">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-heading">
+          <h2 class="text-custom-black fw-700">{{ .Params.team_title }}</h2>
+          <div class="section-description">
+            <p class="text-light-white">{{ .Params.team_text }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row doctors-team-style-2 j-center">
+        {{ range ( first 2 (where site.RegularPages.ByDate  "Type" "attorneys")) }}
+          <div class="col-lg-3 col-md-6 d-grid">
+            <div class="team-block p-relative mb-xl-30">
+              <div class="inner-box">
+                <div class="image animate-img">
+                  <img src="{{ .Params.attorney_image }}" alt="img" class="full-width">
+                  <div class="overlay-box">
+                    <div class="overlay-inner p-relative full-height">
+                      <ul class="team-social-box custom">
+                        {{ if .Params.linkedin }}
+                          {{ range .Params.linkedin }}
+                            <li class="linkedin">
+                              <a href="{{ .url }}" class="fab fa-linkedin fs-16"></a>
+                            </li>
+                          {{ end }}
+                        {{ end }}
+                        {{ if .Params.facebook }}
+                          {{ range .Params.facebook }}
+                            <li class="facebook">
+                              <a href="{{ .url }}" class="fab fa-facebook-f fs-16"></a>
+                            </li>
+                          {{ end }}
+                        {{ end }}
+                        {{ if .Params.twitter }}
+                          {{ range .Params.twitter }}
+                            <li class="twitter">
+                              <a href="{{ .url }}" class="fab fa-twitter fs-16"></a>
+                            </li>
+                          {{ end }}
+                        {{ end }}
+                        {{ if .Params.instagram }}
+                          {{ range .Params.instagram }}
+                            <li class="instagram">
+                              <a href="{{ .url }}" class="fab fa-instagram fs-16"></a>
+                            </li>
+                          {{ end }}
+                        {{ end }}
+                        {{ if .Params.email }}
+                          {{ range .Params.email }}
+                            <li class="instagram">
+                              <a href="{{ .url }}" class="fas fa-envelope-open-text fs-16"></a>
+                            </li>
+                          {{ end }}
+                        {{ end }}
+                        {{ if .Params.phone_no }}
+                          {{ range .Params.phone_no }}
+                            <li class="instagram">
+                              <a href="tel:{{ .url }}" class="fas fa-phone fs-16"></a>
+                            </li>
+                          {{ end }}
+                        {{ end }}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="lower-content p-relative text-center">
+                  <h3><a href="{{ .RelPermalink }}" class="text-custom-black fw-600 fs-20">{{ .Title }}</a></h3>
+                  <p class="designation text-light-white">{{ .Params.Position }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section> -->
+  <section class="section-padding  exp-cal2 LOANLY-advertisement parallax">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-heading">
+          <h2 class="text-white">{{ .Params.about_company_title }}</h2>
+          <div class="section-description">
+            <p class="text-light-white">{{ .Params.about_company_description }}</p>
+            <div class="btn-group">
+              <a href="{{ .Params.about_company_btn_url }}" class="btn-first btn-submit fw-600 mb-xs-20">{{ .Params.about_company_btn }}</a>
+              <a href="{{ .Params.about_company_btn2_url }}" class="btn-first btn-submit-fill fw-600 mb-xs-20">{{ .Params.about_company_btn2 }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+ 
+  <section class="section-padding our_articles">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-heading">
+          <h3 class="text-custom-black fw-700">{{ .Params.blog_title }}</h3>
+          <div class="section-description">
+            <p class="text-light-white">{{ .Params.blog_text }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 no-padding">
+          <div class="blog-slider">
+            <div class="row j-center">
+              {{ range (where .Site.RegularPages.ByDate "Type" "blog").Reverse }}
+                <div class="col-lg-4 d-grid">
+                  <article class="post col-12 d-grid">
+                    <div class="single-blog">
+                      <div class="post-meta">
+                        <div class="post-date">
+                          <a href="{{ .RelPermalink }}" class="text-custom-white">{{ dateFormat "Jan 02, 2006" .Params.blog_date }}</a>
+                        </div>
+                      </div>
+                      <div class="blog-photo">
+                        <img src="{{ .Params.blog_image }}" class="full-width" alt="#">
+                      </div>
+                      <div class="post-contnet">
+                        <h2 class="post-title text-custom-black">{{ .Title }}</h2>
+                        <p class="text-light-white">{{ .Params.about_blog }}</p>
+                      </div>
+                      <div class="blog-overlay">
+                        <div class="right-text-effect post-content">
+                          <h2 class="post-title"><a href="{{ .RelPermalink }}" class="text-white">{{ .Title }}</a></h2>
+
+                        </div>
+                        <div class="blog-read-more-icon">
+                          <a href="{{ .RelPermalink }}" class="fw-500 fs-14">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              {{ end }}
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-padding exp-cal parallax testimonials ln-process">
+    <div class="container">
+      <div class="row j-center">
+        <div class="col-lg-8">
+          <div class="testimonials-box mb-md-80">
+            <div class="section-header">
+              <div class="section-heading">
+                <h3 class="text-custom-black fw-700">{{ .Params.testimonial_title }}</h3>
+              </div>
+            </div>
+            <div class="testimonials-wrapper">
+              <div class="modern-slider">
+                {{ range .Params.testimonial_list }}
+                  <div class="info">
+                    <p class="text-light-white"> <i class="fa fa-quote-left" aria-hidden="true"></i>{{ .text }}<i class="fa fa-quote-right" aria-hidden="true"></i></p>
+                     <h3>{{ .name }}</h3>
+                  </div>
+                {{ end }}        
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{- if .Site.IsServer -}} {{ "<!-- END _default: home.html -->" | safeHTML }} {{- end -}}
+{{ end }}
+
