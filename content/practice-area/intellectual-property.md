@@ -23,7 +23,7 @@ Intellectual Properties are key differentiating factors and one of the most impo
 
 Intellectual Property of any business includes the business name, trademarks, logos, recipes, licenses, patents of products or processes, etc.
 
-Castlemore’s expert lawyers of Intellectual Property Law of Canada will help you with trademark registration, business name registration, patent application, etc.
+WestOntario’s expert lawyers of Intellectual Property Law of Canada will help you with trademark registration, business name registration, patent application, etc.
 
 
 As your business develops, you will hope to ensure your advancements and skill. Dissecting your serious space is additionally basic. That is the place where we come in with giving assessments in regards to your opportunity to work and the patentability of your creations. 

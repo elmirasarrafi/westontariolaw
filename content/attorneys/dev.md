@@ -15,7 +15,7 @@ attorney_image: "/images/team/devrup-mitra.jpg"
 # instagram:
 #   - url: ""
 email:
-  - url: "mailto:info@castlemorelaw.com"
+  - url: "mailto:info@westontariolaw.com"
 phone_no:
   - url: "16473715711"
 linkedin:

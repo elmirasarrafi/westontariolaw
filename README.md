@@ -1,2 +1,2 @@
-# castlemorelaw-hugo
-Castlemore law hugo website
+# westontariolaw-hugo
+WestOntario law hugo website

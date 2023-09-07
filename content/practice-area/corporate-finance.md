@@ -21,7 +21,7 @@ weight: 40
 
 We can help you liaise with angel investors and venture capitalists. Advise you through various rounds of fundraising. Helping you prepare Term Sheets and other financial documents, while negotiating key terms and conditions.
 
-Castlemore Law can help you with business investment and connect with investors to fulfill your Funding Requirements for your startup’s growth.
+WestOntario Law can help you with business investment and connect with investors to fulfill your Funding Requirements for your startup’s growth.
 
 Some of the designated organizations for corporate financing in Canada according to the [Canada’s Government Official Website](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/start-visa/designated-organizations.html).
 

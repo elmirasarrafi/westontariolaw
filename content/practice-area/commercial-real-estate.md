@@ -6,24 +6,24 @@ menu:
     name: Commercial Real Estate
     weight: 35
 
-summary: "Castlemore's Real Estate Law Experts Group is your go-to group of specialists in a wide range of land matters. We convey on significant undertakings and exchanges and offer continuous help for your progressing renting, financing and value-based necessities. Our seat strength is unparalleled the nation over. "
-description: "Castlemore's Real Estate Law Experts Group is your go-to group of specialists in a wide range of land matters. We convey on significant undertakings and exchanges and offer continuous help for your progressing renting, financing and value-based necessities. Our seat strength is unparalleled the nation over. "
+summary: "WestOntario's Real Estate Law Experts Group is your go-to group of specialists in a wide range of land matters. We convey on significant undertakings and exchanges and offer continuous help for your progressing renting, financing and value-based necessities. Our seat strength is unparalleled the nation over. "
+description: "WestOntario's Real Estate Law Experts Group is your go-to group of specialists in a wide range of land matters. We convey on significant undertakings and exchanges and offer continuous help for your progressing renting, financing and value-based necessities. Our seat strength is unparalleled the nation over. "
 images:
   - "/images/practice-area/commercial-real-estate.jpg"
 page_header: "/images/practice-area/commercial-real-estate.jpg" 
 practice_area_image: "/images/practice-area/commercial-real-estate.jpg"
-about: "Castlemore's Real Estate Law Experts Group is your go-to group of specialists in a wide range of land matters. We convey on significant undertakings and exchanges and offer continuous help for your progressing renting, financing and value-based necessities. Our seat strength is unparalleled the nation over. "
+about: "WestOntario's Real Estate Law Experts Group is your go-to group of specialists in a wide range of land matters. We convey on significant undertakings and exchanges and offer continuous help for your progressing renting, financing and value-based necessities. Our seat strength is unparalleled the nation over. "
 draft: false
 weight: 50
 ---
 
 # Commercial Real Estate Advisor Lawyer in Canada
 
-Castlemore’s attorneys specializing in Commercial Real Estate Law will help you fulfill all your legal help needs with the highest satisfaction rate.
+WestOntario’s attorneys specializing in Commercial Real Estate Law will help you fulfill all your legal help needs with the highest satisfaction rate.
 
-Castlemore's Real Estate Law Experts Group is your go-to group of specialists in a wide range of land matters. We convey on significant undertakings and exchanges and offer continuous help for your progressing renting, financing and value-based necessities. Our seat strength is unparalleled the nation over. 
+WestOntario's Real Estate Law Experts Group is your go-to group of specialists in a wide range of land matters. We convey on significant undertakings and exchanges and offer continuous help for your progressing renting, financing and value-based necessities. Our seat strength is unparalleled the nation over. 
 
-Castlemore legal advisors complete the arrangement. Our essential objective is to accomplish your targets effectively. We convey our mastery, assets and imaginative answers for accomplice in your prosperity. We can use innovative arrangements and convey the profundity of our entire group to your advantage. 
+WestOntario legal advisors complete the arrangement. Our essential objective is to accomplish your targets effectively. We convey our mastery, assets and imaginative answers for accomplice in your prosperity. We can use innovative arrangements and convey the profundity of our entire group to your advantage. 
 
 Our customers incorporate land engineers, private institutional speculators, both neighborhood and unfamiliar, monetary establishments, benefits reserves, annuity store supervisors, insurance agencies and Crown enterprises. We speak to both privately held customers and traded on Public market partnerships and REITs. 
 
@@ -33,4 +33,4 @@ Our legal advisors have the neighborhood ability to prompt you on the most perpl
 
 Our workplaces across Canada can all the while handle acquisitions, airs, renting, financing, joint endeavors and speculation exchanges in different purviews. We are knowledgeable about taking care of land matters for specific businesses and areas. 
 
-Call us at [__+1 (647) 371-5711__](tel:16473715711) or Email us at [__info@castlemorelaw.com__](mailto:info@castlemorelaw.com) to relieve the tension of finding the right legal partner for your corporate real estate legal necessities.
+Call us at [__+1 (343) 305-5858__](tel:13433055858) or Email us at [__info@westontariolaw.com__](mailto:info@westontariolaw.com) to relieve the tension of finding the right legal partner for your corporate real estate legal necessities.

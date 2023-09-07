@@ -3,11 +3,11 @@ languageCode = "en"
 contentDir = "content"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
-title = "Castlemore Law"
+title = "WestOntario Law"
 summaryLength = "30"
 # Enable Google Analytics by entering your tracking code
 #googleAnalytics = "UA-186216710-1"
-disqusShortname = "castlemore-law"
+disqusShortname = "westontario-law"
 
 
 # Define the number of posts per page
@@ -32,20 +32,20 @@ author = "authors"
 # Site Params
 [params]
 
-logo = "/images/castlemore-law-white.svg" 
-sticky_logo = "/images/castlemore-law-logo.svg"
+logo = "/images/westontario-law-white.svg" 
+sticky_logo = "/images/westontario-law-logo.svg"
 
 address = "606 4 St SW #1100, Calgary, AB T2P1T1 | 202-1460 The Queensway, Etobicoke, ON M8Z 1S4"
 address_topbar = "ALBERTA | BRITISH COLUMBIA | ONTARIO"
-email = "info@castlemorelaw.com"
+email = "info@westontariolaw.com"
 
 
-phone_no = "+1.587.600.1112"
-phone_no_url = "15876001112"
+phone_no = "+1.343.305.5858"
+phone_no_url = "+13433055858"
 fax_no = "+1.587.600.1188"
 fax_no_url = "+15876001188"
 
-about_footer = "Castlemore Law’s has an expert team of attorneys in different practice areas and will help you with your legal needs as your personal guide."
+about_footer = "WestOntario Law’s has an expert team of attorneys in different practice areas and will help you with your legal needs as your personal guide."
 
 page_header = "/images/banner2.jpg"
 
@@ -54,7 +54,7 @@ twitter_url = ""
 linkedin_url = ""
 
 
-siderbar_title = "Castlemore Law"
+siderbar_title = "WestOntario Law"
 
 # Config Array 
 
@@ -69,12 +69,12 @@ brand = [
 
 # Meta Data
 
-Description = "Castlemore Law’s has an expert team of attorneys in different practice areas and will help you with your legal needs as your personal guide."
+Description = "WestOntario Law’s has an expert team of attorneys in different practice areas and will help you with your legal needs as your personal guide."
 images = ["/images/social.jpg"] # This will use the image called og.png in static/img folder
 
 
 # copyright
-copyright = "By Castlemore Law ."
+copyright = "By WestOntario Law ."
 
 # main menu
 
