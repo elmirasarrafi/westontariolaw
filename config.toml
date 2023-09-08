@@ -16,7 +16,7 @@ Paginate = 6
 #Hugo version = 0.78.2
 #Hugo_version_link = "https://github.com/gohugoio/hugo/releases/tag/v0.78.2/"
 
-#video_link ="https://www.pexels.com/video/a-man-and-a-woman-walking-in-business-suits-4480595/"
+#video_link ="https://www.pexels.com/video/group-of-people-having-a-discussion-4475911/"
 
 [markup]
   [markup.blackFriday]
@@ -32,11 +32,11 @@ author = "authors"
 # Site Params
 [params]
 
-logo = "/images/westontario-law-logo.svg" 
+logo = "/images/WestOntario-Law-white-long-small.png" 
 sticky_logo = "/images/westontario-law-logo.svg"
 
 address = "341 Talbot St, London ON N6A 2R5 Canada"
-address_topbar = "London, Canada, ONTARIO"
+address_topbar = "ONTARIO"
 email = "info@westontariolaw.com"
 
 
