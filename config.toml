@@ -32,11 +32,11 @@ author = "authors"
 # Site Params
 [params]
 
-logo = "/images/westontario-law-white.svg" 
+logo = "/images/westontario-law-logo.svg" 
 sticky_logo = "/images/westontario-law-logo.svg"
 
-address = "606 4 St SW #1100, Calgary, AB T2P1T1 | 202-1460 The Queensway, Etobicoke, ON M8Z 1S4"
-address_topbar = "ALBERTA | BRITISH COLUMBIA | ONTARIO"
+address = "341 Talbot St, London ON N6A 2R5 Canada"
+address_topbar = "London, Canada, ONTARIO"
 email = "info@westontariolaw.com"
 
 
